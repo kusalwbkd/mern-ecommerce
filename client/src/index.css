@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.img-container{
+    position: relative;
+    display: block;
+}
+
+
+
+@media screen and (max-width: 1023px) {
+    /* Your styles for screens with width between 768px and 1023px */
+    .hero-img{
+        height: 350px;
+      
+        width: 350px;
+        margin: auto;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    /* Your styles for screens with a minimum width of 1024px */
+    .img-container::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       content: "";
+      position: absolute;
+       width: 100%;
+       height: 100%;
+       border: 0.25rem solid  hsl(22, 31%, 81%);
+       top: 2rem;
+       right: -2rem;
+    
+    }
+
+    .hero-img{
+        height: 550px;
+    }
+  }
+  
+
+
